@@ -1,7 +1,16 @@
 import reactDom from "react-dom";
+import Topo from "./components/Topo";
+import Stories from "./components/Stories";
 
-function Hello() {
-  return <h1> Hello, world! </h1>;
+function App() {
+    return (
+      <div>
+        <Topo />
+        <Stories />
+      </div>
+    );
 }
 
-reactDom.render(Hello(), document.querySelector(".root"));
+
+
+reactDom.render(App(), document.querySelector(".root"));
