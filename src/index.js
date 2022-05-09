@@ -2,6 +2,7 @@ import reactDom from "react-dom";
 import Topo from "./components/Topo";
 import Stories from "./components/Stories";
 import Posts from "./components/Posts";
+import Sidebar from "./components/Sidebar";
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
         <Topo />
         <Stories />
         <Posts />
+        <Sidebar />
       </div>
     );
 }
