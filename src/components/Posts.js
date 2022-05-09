@@ -69,8 +69,7 @@ function Post(props) {
 export default function Posts() {
 
   return (
-    <div class="corpo">
-      <div class="esquerda">
+    
         <div class="posts">
           {postItens.map((itens) => (
             <Post
@@ -83,7 +82,6 @@ export default function Posts() {
             />
           ))}
         </div>
-      </div>
-    </div>
+      
   );
 }

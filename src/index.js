@@ -6,12 +6,18 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
     return (
-      <div>
+      <>
         <Topo />
-        <Stories />
-        <Posts />
-        <Sidebar />
-      </div>
+        <div class="corpo">
+          <div class="esquerda">
+            <Stories />
+            <Posts />
+          </div>
+          <div class="sidebar">
+            <Sidebar />
+          </div>
+        </div>
+      </>
     );
 }
 
