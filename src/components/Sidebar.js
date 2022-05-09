@@ -6,18 +6,19 @@ import adorableAnimals from "../assets/img/adorable_animals.svg"
 import SmallCuteCats from "../assets/img/smallcutecats.svg"
 
 const SideUserContent = [
-    {
-        img: SideUserSrc,
-        userName: "catanacomics",
-        name: "Catana"
-    },
-]
+  {
+    img: SideUserSrc,
+    altImg: "catanacomics",
+    userName: "catanacomics",
+    name: "Catana",
+  },
+];
 
 function SideUser(props) {
     return (
       
         <div class="usuario">
-          <img src={props.img} />
+            <img src={props.img} alt={props.altImg}/>
           <div class="texto">
             <strong>{props.userName}</strong>
                 <p>{props.name}</p>
@@ -30,6 +31,7 @@ function SideUser(props) {
 const SideBarContent = [
   {
     SugestionImg: BadVibesMemes,
+    AltSugImg: "bad.vibes.memes",
     SugestionName: "bad.vibes.memes",
     SugestionStatus: "Segue você",
   },
@@ -59,13 +61,13 @@ function SideBarSugestions(props) {
     return (
       <div class="sugestao">
         <div class="usuario">
-          <img src={props.SugestionImg} />
+            <img src={props.SugestionImg} alt={props.AltSugImg}/>
           <div class="texto">
             <div class="nome">
-              <p>{props.SugestionName}</p>
+              {props.SugestionName}
             </div>
             <div class="razao">
-              <p>{props.SugestionStatus}</p>
+              {props.SugestionStatus}
             </div>
           </div>
         </div>

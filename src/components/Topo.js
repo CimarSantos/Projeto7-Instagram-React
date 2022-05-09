@@ -1,6 +1,6 @@
 export default function Topo() {
   return (
-    <div>
+    
       <div class="navbar">
         <div class="container">
           <div class="logo">
@@ -33,6 +33,6 @@ export default function Topo() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }

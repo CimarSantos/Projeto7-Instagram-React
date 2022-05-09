@@ -8,18 +8,22 @@ import adorableAnimals from "../assets/img/adorable_animals.svg"
 const postItens = [
   {
     UserSrc: meowed,
+    AltSrc: "meowed",
     UserTitle: "meowed",
     PostContent: gatoTelefone,
     CurtidasSrc: respondeAi,
     LikeFor: "respondeai",
+    AltSrcContent: "respondeai",
     NumberLikes: "101.523",
   },
   {
     UserSrc: barked,
+    AltSrc: "barked",
     UserTitle: "barked",
     PostContent: dog,
     CurtidasSrc: adorableAnimals,
     LikeFor: "adorable_animals",
+    AltSrcContent: "adorable_animals",
     NumberLikes: "99.159",
   },
 ];
@@ -29,7 +33,7 @@ function Post(props) {
       <div class="post">
         <div class="topo">
           <div class="usuario">
-            <img src={props.UserSrc} />
+            <img src={props.UserSrc} alt={props.AltSrc} />
             <p> {props.UserTitle} </p>
           </div>
 
@@ -39,7 +43,7 @@ function Post(props) {
         </div>
 
         <div class="conteudo">
-          <img src={props.PostContent} />
+          <img src={props.PostContent} alt={props.AltSrcContent} />
         </div>
 
         <div class="fundo">
@@ -55,7 +59,7 @@ function Post(props) {
           </div>
 
           <div class="curtidas">
-            <img src={props.CurtidasSrc} />
+            <img src={props.CurtidasSrc} alt={props.AltSrcContent} />
             <div class="texto">
               Curtido por <strong>{props.LikeFor}</strong> e outras{" "}
               <strong>{props.NumberLikes}</strong>
@@ -69,19 +73,19 @@ function Post(props) {
 export default function Posts() {
 
   return (
-    
-        <div class="posts">
-          {postItens.map((itens) => (
-            <Post
-              UserSrc={itens.UserSrc}
-              UserTitle={itens.UserTitle}
-              PostContent={itens.PostContent}
-              CurtidasSrc={itens.CurtidasSrc}
-              LikeFor={itens.LikeFor}
-              NumberLikes={itens.NumberLikes}
-            />
-          ))}
-        </div>
-      
+    <div class="posts">
+      {postItens.map((itens) => (
+        <Post
+          UserSrc={itens.UserSrc}
+          Alt={itens.Alt}
+          UserTitle={itens.UserTitle}
+          PostContent={itens.PostContent}
+          CurtidasSrc={itens.CurtidasSrc}
+          LikeFor={itens.LikeFor}
+          AltSrcContent={itens.AltSrcContent}
+          NumberLikes={itens.NumberLikes}
+        />
+      ))}
+    </div>
   );
 }
